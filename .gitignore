@@ -1,0 +1,72 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Static files (if collected)
+staticfiles/
+static/
+
+# macOS
+.DS_Store
+
+# Database migrations (uncomment if you want to ignore migrations)
+# migrations/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# PyEnv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Backup files
+*.bak
+*.backup
+
+# SQLite (if used)
+*.sqlite3
+
+# Gitlab specific
+.gitlab-ci.yml
+
+# Coverage
+coverage.xml
+.coverage
+htmlcov/

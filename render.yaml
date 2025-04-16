@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: aadhityaa-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: |
+      python manage.py migrate
+      python manage.py collectstatic --noinput
+      gunicorn AadhityaaBackend.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: DEBUG
+        value: false
+      - key: DJANGO_SETTINGS_MODULE
+        value: AadhityaaBackend.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///db.sqlite3
+      - key: PORT
+        value: 8000
+    healthCheckPath: /admin/
